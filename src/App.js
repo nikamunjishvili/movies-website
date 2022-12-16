@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { HashRouter as Router, Routes, Route, HashRouter } from "react-router-dom"
 import Header from './components/header/Header';
 import Home from './pages/home/Home';
 import MovieList from './components/movieList/movieList';
@@ -8,6 +8,7 @@ import Movie from './pages/movieDetail/movie';
 function App() {
   return (
     <div className="App">
+      <HashRouter> 
         <Router>
           <Header />
             <Routes>
@@ -17,6 +18,8 @@ function App() {
                 <Route path="/*" element={<h1>Error Page</h1>}></Route>
             </Routes>
         </Router>
+      </HashRouter>
+       
     </div>
   );
 }
