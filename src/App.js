@@ -8,7 +8,6 @@ import Movie from './pages/movieDetail/movie';
 function App() {
   return (
     <div className="App">
-      <HashRouter> 
         <Router>
           <Header />
             <Routes>
@@ -17,9 +16,7 @@ function App() {
                 <Route path="movies/:type" element={<MovieList />}></Route>
                 <Route path="/*" element={<Home />}></Route>
             </Routes>
-        </Router>
-      </HashRouter>
-       
+        </Router>       
     </div>
   );
 }
